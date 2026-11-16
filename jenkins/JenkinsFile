@@ -10,7 +10,7 @@ pipeline {
                 }
             }
             steps {
-                dir 'bugtracker-backend' {  
+                dir ('bugtracker-backend') {  
                     sh 'go test -v ./...'
                 }
             }
@@ -23,7 +23,7 @@ pipeline {
                 }
             }
             steps {
-                dir 'bugtracker-frontend' {  
+                dir ('bugtracker-frontend') {  
                     sh '''
                     npm ci
                     npm test
